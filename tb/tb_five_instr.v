@@ -10,7 +10,6 @@
 //   0x10  00102023   sw   x1, 0(x0)      mem[0] = 5
 //
 // Expected PC sequence: 00 -> 04 -> 08 -> 10 -> 14 -> 18 ...
-// (after 0x10 the memory is empty, so PC just keeps counting up by 4)
 //
 // Expected final state: x1 = 5, x2 = 7, x3 = 0, mem[0] = 5
 //

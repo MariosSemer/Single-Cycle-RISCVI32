@@ -70,15 +70,17 @@ make clean    # remove build output and waveform files
 
 Select the testbench by setting `TOP` and the testbench file in `SRC` at the top of the `Makefile`.
 
-## Testbenches
+## Testbench
 
 | Testbench | What it checks |
 |---|---|
-| `tb_addi_single.v` | One instruction: `addi x3, x1, -3` (negative immediate, sign extension) |
-| `tb_bne_single.v` | One instruction: `bne x1, x2, +8` (taken or not taken, set by `REG_A`/`REG_B`) |
 | `tb_five_instr.v` | `addi`, `addi`, taken `bne` (skips one instruction), `sw`; checks registers and memory |
 
 Each testbench loads its program straight into instruction memory, runs a few cycles, prints PASS/FAIL, and writes a waveform file.
+
+## Waveform
+
+![tb_five_instr Waveform](Images/tb_five_instr.jpg)
 
 ## Known limitations and roadmap
 

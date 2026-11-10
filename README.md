@@ -80,8 +80,6 @@ Select the testbench by setting `TOP` and the testbench file in `SRC` at the top
 
 Each testbench loads its program straight into instruction memory, runs a few cycles, prints PASS/FAIL, and writes a waveform file.
 
-Each testbench has a few macros at the top (`IMEM`, `REGS`, `DMEM_WORD0`) holding hierarchical paths into the instruction memory, register file and data memory. If you rename an internal array, update them to match.
-
 ## Known limitations and roadmap
 
 - Data memory is word-addressed, so `lw` and `sw` work; the sub-word variants (`lb`, `lh`, `lbu`, `lhu`, `sb`, `sh`) are decoded but need byte-enable and extension logic

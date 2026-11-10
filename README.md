@@ -84,8 +84,6 @@ Each testbench loads its program straight into instruction memory, runs a few cy
 
 ## Known limitations and roadmap
 
-- Data memory is word-addressed, so `lw` and `sw` work; the sub-word variants (`lb`, `lh`, `lbu`, `lhu`, `sb`, `sh`) are decoded but need byte-enable and extension logic
-- Link-register write-back (PC+4 into `rd` for `jal` and `jalr`) needs a dedicated adder and write-back mux input
 - `pause`, `fence.tso`, `fence` are NOPs
 - `ecall`, `ebreak` are halts until CSR instructions are added
 - CSR instructions not added yet

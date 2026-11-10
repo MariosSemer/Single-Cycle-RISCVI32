@@ -1,9 +1,9 @@
 VERILATOR = verilator
 
-TOP = tb_riscvi32
+TOP = tb_five_instr
 
 SRC = $(wildcard srcs/*.v)
-SRC = tb/tb_riscvi32.v
+SRC = tb/tb_five_instr.v
 
 all: run
 
@@ -17,7 +17,7 @@ build:
 					 --top-module $(TOP) $(SRC)
 
 waves:
-		gtkwave tb_riscvi32.fst &
+		gtkwave tb_five_instr.fst &
 
 
 clean:
